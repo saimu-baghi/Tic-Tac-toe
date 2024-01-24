@@ -7,6 +7,36 @@
     <title>Tic Tac Toe</title>
     <link rel="stylesheet" href="tictactoe.css">
     <script src="tictactoe.js" defer></script>
+    <script>
+        window.onload = function () {
+            const container = document.querySelector('.container');
+            const board = document.getElementById('board');
+            const result = document.getElementById('result');
+            const resetBtn = document.getElementById('resetBtn');
+            const mobileMessage = document.createElement('p');
+            mobileMessage.innerText = 'If you see this, please turn on Desktop Site';
+            mobileMessage.style.textAlign = 'center';
+            mobileMessage.style.fontSize = '24px';
+
+            const handleResize = () => {
+                const tabletWidthThreshold = 768;
+                const isMobile = window.innerWidth < tabletWidthThreshold;
+
+                if (isMobile) {
+                    container.style.display = 'none';
+                    document.body.appendChild(mobileMessage);
+                } else {
+                    container.style.display = 'block';
+                    if (document.body.contains(mobileMessage)) {
+                        document.body.removeChild(mobileMessage);
+                    }
+                }
+            };
+
+            window.addEventListener('resize', handleResize);
+            handleResize();
+        };
+    </script>
 </head>
 
 <body>

@@ -6,15 +6,21 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
+    color: white;
 }
 
 .container {
     text-align: center;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    max-width: 323px;
+    text-align: center;
 }
 
-.container>h1 {
-    color: white;
-}
 
 .board {
     display: grid;
@@ -22,6 +28,28 @@ body {
     grid-gap: 10px;
     margin-top: 20px;
 }
+
+.container > h1 {
+    width: 325px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.reset-btn {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid #1D2026;
+    border-radius: 5%;
+    outline: none;
+    background-color: #4CC2FF;
+    color: black;
+    width: 325px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+
 
 .cell {
     width: 100px;
@@ -45,9 +73,10 @@ body {
     margin-bottom: 20px;
     font-size: 1.5em;
     color: gold;
+    width: 325px;
 }
 
-.reset-btn {
+/* .reset-btn {
     cursor: pointer;
     font-size: 2rem;
     border: 1px solid #1D2026;
@@ -55,7 +84,7 @@ body {
     outline: none;
     background-color: #4CC2FF;
     color: black;
-}
+} */
 
 .reset-btn:hover {
     background-color: #47B1EA;
